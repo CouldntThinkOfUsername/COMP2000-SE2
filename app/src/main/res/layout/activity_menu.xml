@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    tools:context=".MenuActivity">
+
+    <!-- 1. Top Green Header Bar -->
+    <LinearLayout
+        android:id="@+id/header_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#168A5C"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_chef_hat"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Currently viewing: Location Menu"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- 2. Menu Toolbar with Back Arrow -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/menu_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:layout_constraintTop_toBottomOf="@id/header_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!-- 3. Main Scrollable Content Area -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/menu_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
+
+            <!-- Categories Header -->
+            <TextView
+                android:id="@+id/categories_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categories"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#555555"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Horizontally Scrollable Categories -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:singleLine="true">
+
+                    <!-- Selectable Category Chips -->
+                    <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Choice" android:id="@+id/chip_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="All" android:checked="true"/>
+                    <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Choice" android:id="@+id/chip_main" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Main Courses"/>
+                    <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Choice" android:id="@+id/chip_salads" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Salads"/>
+                    <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Choice" android:id="@+id/chip_pizza" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pizza"/>
+                    <com.google.android.material.chip.Chip style="@style/Widget.MaterialComponents.Chip.Choice" android:id="@+id/chip_desserts" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Desserts"/>
+
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+
+            <!-- Vertically Scrollable Menu Items List -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- ITEM 1: Grilled Salmon -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:strokeWidth="0dp"
+                    app:cardElevation="4dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/image_salmon"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/food_placeholder"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/title_salmon"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Salmon"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:layout_marginStart="16dp"
+                            app:layout_constraintTop_toTopOf="@id/image_salmon"
+                            app:layout_constraintStart_toEndOf="@id/image_salmon"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/desc_salmon"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Fresh Salmon"
+                            android:textColor="#757575"
+                            app:layout_constraintTop_toBottomOf="@id/title_salmon"
+                            app:layout_constraintStart_toStartOf="@id/title_salmon"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/price_salmon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="£ Price"
+                            android:textStyle="bold"
+                            android:textColor="#C05D00"
+                            android:background="@drawable/price_background"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="6dp"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintTop_toBottomOf="@id/desc_salmon"
+                            app:layout_constraintStart_toStartOf="@id/title_salmon"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- ITEM 2: Caesar Salad -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    app:cardCornerRadius="16dp"
+                    app:strokeWidth="0dp"
+                    app:cardElevation="4dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <ImageView android:id="@+id/image_salad" android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/food_placeholder" android:scaleType="centerCrop" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+                        <TextView android:id="@+id/title_salad" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Salad" android:textSize="18sp" android:textStyle="bold" android:textColor="@android:color/black" android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="@id/image_salad" app:layout_constraintStart_toEndOf="@id/image_salad" app:layout_constraintEnd_toEndOf="parent"/>
+                        <TextView android:id="@+id/desc_salad" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Classic salad" android:textColor="#757575" app:layout_constraintTop_toBottomOf="@id/title_salad" app:layout_constraintStart_toStartOf="@id/title_salad" app:layout_constraintEnd_toEndOf="parent"/>
+                        <TextView android:id="@+id/price_salad" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="£ Price" android:textStyle="bold" android:textColor="#C05D00" android:background="@drawable/price_background" android:paddingHorizontal="12dp" android:paddingVertical="6dp" android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@id/desc_salad" app:layout_constraintStart_toStartOf="@id/title_salad"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- ITEM 3: Margherita Pizza -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:strokeWidth="0dp"
+                    app:cardElevation="4dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp">
+
+                        <ImageView android:id="@+id/image_pizza" android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/food_placeholder" android:scaleType="centerCrop" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+                        <TextView android:id="@+id/title_pizza" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Pizza" android:textSize="18sp" android:textStyle="bold" android:textColor="@android:color/black" android:layout_marginStart="16dp" app:layout_constraintTop_toTopOf="@id/image_pizza" app:layout_constraintStart_toEndOf="@id/image_pizza" app:layout_constraintEnd_toEndOf="parent"/>
+                        <TextView android:id="@+id/desc_pizza" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Margharita" android:textColor="#757575" app:layout_constraintTop_toBottomOf="@id/title_pizza" app:layout_constraintStart_toStartOf="@id/title_pizza" app:layout_constraintEnd_toEndOf="parent"/>
+                        <TextView android:id="@+id/price_pizza" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="£ Price" android:textStyle="bold" android:textColor="#C05D00" android:background="@drawable/price_background" android:paddingHorizontal="12dp" android:paddingVertical="6dp" android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@id/desc_pizza" app:layout_constraintStart_toStartOf="@id/title_pizza"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
