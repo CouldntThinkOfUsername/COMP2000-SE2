@@ -18,7 +18,7 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/ic_launcher_foreground"
+            android:src="@drawable/outline_fastfood_24"
             android:background="#006C44"
             android:padding="25dp" />
 
