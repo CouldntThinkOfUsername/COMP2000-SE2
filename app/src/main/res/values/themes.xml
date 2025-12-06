@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.CW2" parent="Theme.Material3.DayNight.NoActionBar"/>
+    <style name="Widget.App.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@null</item>
+    </style>
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@drawable/splash_screen_drawable</item>
+        <item name="postSplashScreenTheme">@style/Theme.CW2</item>
+    </style>
+    <style name="Theme.CW2" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+
+</resources>
