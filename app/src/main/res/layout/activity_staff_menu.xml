@@ -106,7 +106,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/baseline_edit_24"
-                    android:background="transparent"
+                    android:background="@android:color/transparent"
                     android:padding="15dp"
                     />
 
@@ -115,7 +115,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/outline_delete_24"
-                    android:background="transparent"
+                    android:background="@android:color/transparent"
                     android:padding="15dp"
                     />
 
@@ -145,7 +145,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/baseline_edit_24"
-                    android:background="transparent"
+                    android:background="@android:color/transparent"
                     android:padding="15dp"
                     />
 
@@ -153,7 +153,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/outline_delete_24"
-                    android:background="transparent"
+                    android:background="@android:color/transparent"
                     android:padding="15dp"
                     />
 
@@ -184,14 +184,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/baseline_edit_24"
-                    android:background="transparent"
+                    android:background="@android:color/transparent"
                     android:padding="15dp"
                     />
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/outline_delete_24"
-                    android:background="transparent"
+                    android:background="@android:color/transparent"
                     android:padding="15dp"
                     />
             </LinearLayout>
@@ -219,14 +219,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/baseline_edit_24"
-                    android:background="transparent"
+                    android:background="@android:color/transparent"
                     android:padding="15dp"
                     />
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/outline_delete_24"
-                    android:background="transparent"
+                    android:background="@android:color/transparent"
                     android:padding="15dp"
                     />
             </LinearLayout>
