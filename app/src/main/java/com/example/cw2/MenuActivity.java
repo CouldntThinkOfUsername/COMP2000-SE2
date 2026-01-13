@@ -1,6 +1,8 @@
 package com.example.cw2;import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.widget.ImageButton;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.cw2.MenuContract.MenuItemEntry;
@@ -14,6 +16,9 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         dbHelper = new MenuDbHelper(this);
         insertProductData();
+
+        ImageButton backButton = findViewById(R.id.back_button);
+        backButton.setOnClickListener(v -> finish());
     }
 
     private void insertProductData() {

@@ -38,5 +38,37 @@
             android:name=".ReservationsActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StaffLoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".EditMenuActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MakeReservationActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StaffHomeActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StaffMenuActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StaffProductsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".StaffReservationsActivity"
+            android:exported="false" />
+
     </application>
 </manifest>

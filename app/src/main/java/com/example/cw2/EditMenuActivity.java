@@ -5,6 +5,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -13,6 +14,7 @@ public class EditMenuActivity extends AppCompatActivity {
 
     private TextInputEditText nameEditText, descriptionEditText, categoryEditText, priceEditText;
     private Button saveButton, cancelButton;
+    private ImageButton backButton;
     private MenuDbHelper dbHelper;
     private long itemId;
 
@@ -30,6 +32,7 @@ public class EditMenuActivity extends AppCompatActivity {
         priceEditText = findViewById(R.id.edit_text_item_price);
         saveButton = findViewById(R.id.button_save);
         cancelButton = findViewById(R.id.button_cancel);
+        backButton = findViewById(R.id.back_button);
 
         itemId = getIntent().getLongExtra("ITEM_ID", -1);
 
@@ -43,6 +46,7 @@ public class EditMenuActivity extends AppCompatActivity {
 
         saveButton.setOnClickListener(v -> saveChanges());
         cancelButton.setOnClickListener(v -> finish()); // "Cancel" just closes the activity
+        backButton.setOnClickListener(v -> finish());
     }
 
     private void loadItemData() {

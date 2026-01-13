@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#00A86B"
+    android:background="@color/splash_background_green"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -19,14 +19,14 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/outline_fastfood_24"
-            android:background="#006C44"
+            android:background="@color/colorPrimary"
             android:padding="25dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Restaurant"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold"
             android:paddingTop="16dp" />
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:indeterminate="true"
-            android:indeterminateTint="@android:color/white"/>
+            android:indeterminateTint="@color/white"/>
 
     </LinearLayout>
 
